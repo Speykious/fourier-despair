@@ -16,4 +16,7 @@ void dft(float res[], float ims[], const size_t size) {
       ims[k] -= in_ims[n] * sin(a);
     }
   }
+
+  free(in_res);
+  free(in_ims);
 }
