@@ -12,8 +12,8 @@ void dft(float res[], float ims[], const size_t size) {
     ims[k] = 0;
     for (size_t n = 0; n < size; n++) {
       float a = TAU * k * n / (float)size;
-      res[k] += in_res[n] * cos(a);
-      ims[k] -= in_ims[n] * sin(a);
+      res[k] +=  in_res[n] * cos(a) + in_ims[n] * sin(a);
+      ims[k] += -in_ims[n] * sin(a) + in_ims[n] * cos(a);
     }
   }
 
