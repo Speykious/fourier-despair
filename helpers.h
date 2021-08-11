@@ -8,5 +8,6 @@
 
 float* copy_floats(const float arr[], size_t size);
 float* generate_sinewave(const float hz, const float freq, const float amp, const size_t size);
+float* generate_cosinewave(const float hz, const float freq, const float amp, const size_t size);
 
 #endif

@@ -15,3 +15,10 @@ float* generate_sinewave(const float hz, const float freq, const float amp, cons
     sinewave[i] = amp * sin(TAU * freq * i / hz);
   return sinewave;
 }
+
+float* generate_cosinewave(const float hz, const float freq, const float amp, const size_t size) {
+  float* cosinewave = malloc(size * sizeof(float));
+  for (size_t i = 0; i < size; i++)
+    cosinewave[i] = amp * cos(TAU * freq * i / hz);
+  return cosinewave;
+}

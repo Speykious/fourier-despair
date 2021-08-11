@@ -1,15 +1,17 @@
-TARGETS = dft.plot
+B = bin/
+
+TARGETS = $Bdft.plot
 LIBS = -lm
 CFLAGS = -g -Wall -Wextra
 CC = gcc
 
 all: $(TARGETS)
 	
-dft.plot: dft.plot.o dft.o helpers.o
+$Bdft.plot: $Bdft.plot.o $Bdft.o $Bhelpers.o
 	$(CC) $(CFLAGS) $^ -o $@ $(LIBS)
 
-%.o: %.c
+$B%.o: %.c
 	$(CC) $(CFLAGS) -c $< -o $@ $(LIBS)
 
 clean:
-	/bin/rm $(TARGETS)
+	cd $B && /bin/rm $(TARGETS) && cd ..

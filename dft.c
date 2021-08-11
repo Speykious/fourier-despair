@@ -4,8 +4,8 @@
 
 void dft(float res[], float ims[], const size_t size) {
   // Taking these arrays as input and the argument arrays as output
-  const float* in_res = copy_floats(res, size);
-  const float* in_ims = copy_floats(ims, size);
+  float* in_res = copy_floats(res, size);
+  float* in_ims = copy_floats(ims, size);
 
   for (size_t k = 0; k < size; k++) {
     res[k] = 0;
